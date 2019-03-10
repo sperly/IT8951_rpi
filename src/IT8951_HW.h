@@ -1,6 +1,11 @@
 #ifndef _IT8951_HW_H_
 #define _IT8951_HW_H_
 
+#include <stdint.h>
+
+#define debug_print(fmt, ...) \
+            do { if (DEBUG) fprintf(stderr, fmt, __VA_ARGS__); } while (0)
+
 void IT8951_HW_Init(void);
 void IT8951_HW_WaitForReady(void);
 void IT8951_HW_WriteCmdCode(uint16_t usCmdCode);
@@ -11,4 +16,4 @@ void IT8951_HW_ReadNData(uint16_t* pwBuf, uint32_t ulSizeWordCnt);
 void IT8951_HW_SendCmdArg(uint16_t usCmdCode,uint16_t* pArg, uint16_t usNumArg);
 void IT8951_HW_Close(void);
 
-#endif _IT8951_HW_H_
+#endif //_IT8951_HW_H_

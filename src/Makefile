@@ -1,4 +1,4 @@
-SRCS=IT8951.c miniGUI.c main.c AsciiLib.c
+SRCS=IT8951.c IT8951_HW.c gfx.c bmp.c main.c AsciiLib.c
 CC=gcc
 TARGET=IT8951
 
